@@ -34,7 +34,7 @@ class AnyOfReferencefGuesser implements ChainGuesserAwareInterface, GuesserInter
 
     public function supportObject($object): bool
     {
-        return $object instanceof Schema && \is_array($object->getAnyOf()) && $object->getAnyOf()[0] instanceof Reference;
+        return $object instanceof Schema && \is_array($object->getAnyOf());
     }
 
     public function guessType($object, string $name, string $reference, Registry $registry): Type
