@@ -40,6 +40,7 @@ class GuesserFactory
         $chainGuesser->addGuesser(new AdditionalPropertiesGuesser(Schema::class));
         $chainGuesser->addGuesser(new AllOfGuesser($serializer, $naming, Schema::class));
         $chainGuesser->addGuesser(new AnyOfReferencefGuesser($serializer, $naming, Schema::class));
+        $chainGuesser->addGuesser(new OneOfReferencefGuesser($serializer, $naming, Schema::class));
         $chainGuesser->addGuesser(new ArrayGuesser(Schema::class));
         $chainGuesser->addGuesser(new ItemsGuesser(Schema::class));
         $chainGuesser->addGuesser(new SimpleTypeGuesser(Schema::class));
